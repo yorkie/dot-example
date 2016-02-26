@@ -1,5 +1,11 @@
 digraph example {
-  a -> b -> c;
-  b -> d;
+  phone_input [shape=box label="phone"];
+  phone_state [shape=doublecircle label="phone"];
+  smscode_input [shape=box label="smscode"];
+  smscode_state [shape=doublecircle label="smscode"];
+  login_state [shape=doublecircle label="login"];
+
+  phone_input -> phone_state -> login_state;
+  smscode_input -> smscode_state -> login_state;
 }
 
